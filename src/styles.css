@@ -1,6 +1,6 @@
 :root {
   color: #22252b;
-  background: #f3f4f2;
+  background: #f6f7f4;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
@@ -34,7 +34,7 @@ button:disabled {
 
 .app-shell {
   min-height: 100vh;
-  padding: 14px;
+  padding: 18px;
 }
 
 .app-header {
@@ -42,20 +42,19 @@ button:disabled {
   display: flex;
   gap: 16px;
   justify-content: space-between;
-  margin: 0 auto 10px;
+  margin: 0 auto 14px;
   max-width: 1680px;
 }
 
 .app-header h1 {
-  font-size: 19px;
+  font-size: 24px;
   line-height: 1.1;
   margin: 0;
 }
 
 .app-header p {
   color: #666b73;
-  font-size: 14px;
-  margin: 3px 0 0;
+  margin: 4px 0 0;
   overflow-wrap: anywhere;
 }
 
@@ -84,33 +83,24 @@ button:disabled {
 
 .action-bar {
   align-items: center;
-  background: #ffffff;
-  border: 1px solid #dfe4e1;
-  border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   justify-content: space-between;
-  margin: 0 auto 10px;
+  margin: 0 auto 12px;
   max-width: 1680px;
-  padding: 7px;
 }
 
 .file-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .action-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-}
-
-.toolbar-cluster {
-  align-items: center;
-  display: flex;
+  gap: 8px;
 }
 
 .tool-button,
@@ -122,10 +112,10 @@ button:disabled {
   border-radius: 8px;
   color: #2b2f35;
   display: inline-flex;
-  gap: 6px;
+  gap: 7px;
   justify-content: center;
-  min-height: 32px;
-  padding: 6px 10px;
+  min-height: 38px;
+  padding: 8px 12px;
   transition:
     background 150ms ease,
     border-color 150ms ease,
@@ -134,19 +124,24 @@ button:disabled {
 }
 
 .document-select {
-  background: #fbfbfa;
-  min-height: 32px;
+  appearance: none;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%233f464d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 16px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  min-height: 38px;
   min-width: 260px;
-  padding: 6px 32px 6px 10px;
+  padding: 8px 46px 8px 12px;
 }
 
 .compact-tool {
-  min-height: 32px;
-  padding: 6px 9px;
+  min-height: 34px;
+  padding: 7px 10px;
 }
 
 .tool-button {
-  background: #fbfbfa;
+  background: #ffffff;
 }
 
 .import-button {
@@ -164,16 +159,23 @@ button:disabled {
 
 .tool-button:hover,
 .tool-button.selected {
-  background: #eef2ef;
-  border-color: #aeb8b2;
-  color: #1f3b35;
+  background: #e7f4f1;
+  border-color: #77b7ad;
+  color: #0d5f59;
 }
 
 .save-button {
-  background: #20242a;
-  border-color: #20242a;
+  background: #1f2a34;
+  border-color: #1f2a34;
+  box-shadow: 0 6px 16px rgba(31, 42, 52, 0.16);
   color: #ffffff;
   flex: 0 0 auto;
+  font-weight: 700;
+}
+
+.save-button:hover {
+  background: #111820;
+  border-color: #111820;
 }
 
 .error-banner {
@@ -190,7 +192,7 @@ button:disabled {
   display: grid;
   gap: 12px;
   grid-template-columns: minmax(320px, 1.15fr) minmax(320px, 0.95fr) minmax(300px, 0.72fr);
-  height: calc(100vh - 118px);
+  height: calc(100vh - 142px);
   margin: 0 auto;
   max-width: 1680px;
   min-height: 620px;
@@ -208,14 +210,13 @@ button:disabled {
 
 .panel-header {
   align-items: center;
-  background: #fbfbfa;
   border-bottom: 1px solid #e4e8e5;
   display: flex;
   flex: 0 0 auto;
   gap: 12px;
   justify-content: space-between;
-  min-height: 42px;
-  padding: 9px 12px;
+  min-height: 48px;
+  padding: 10px 12px;
 }
 
 .panel-header h2 {
@@ -225,7 +226,7 @@ button:disabled {
 }
 
 .latex-editor {
-  background: #fdfdfc;
+  background: #fbfcfa;
   border: 0;
   color: #20242a;
   flex: 1 1 auto;
@@ -317,10 +318,10 @@ button:disabled {
 }
 
 .mode-pill {
-  background: #f1f3ee;
-  border: 1px solid #d4dacd;
+  background: #edf5e7;
+  border: 1px solid #ccdcbc;
   border-radius: 999px;
-  color: #465040;
+  color: #435b2b;
   font-size: 12px;
   line-height: 1;
   padding: 6px 9px;
@@ -448,10 +449,19 @@ button:disabled {
 
 .send-button {
   align-self: end;
-  background: #0f766e;
-  border-color: #0f766e;
+  background: #1f2a34;
+  border-color: #1f2a34;
+  border-radius: 8px;
   color: #ffffff;
-  min-width: 90px;
+  font-weight: 700;
+  height: 44px;
+  min-width: 94px;
+  padding: 0 14px;
+}
+
+.send-button:hover {
+  background: #111820;
+  border-color: #111820;
 }
 
 @media (max-width: 1220px) {
