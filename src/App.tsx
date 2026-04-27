@@ -5,6 +5,7 @@ import { EditorPanel } from "./components/EditorPanel";
 import { PreviewPanel } from "./components/PreviewPanel";
 import {
   createDocument,
+  deleteMessages,
   createMessage,
   editWithAi,
   getDocument,
@@ -299,6 +300,32 @@ function App() {
     }
   }
 
+  async function handleClearMessages() {
+    if (messages.length === 0) {
+      return;
+    }
+
+    if (!window.confirm("Clear the chat history for this document?")) {
+      return;
+    }
+
+    setError(null);
+
+    if (!documentId) {
+      setMessages([]);
+      setStatus("Chat cleared");
+      return;
+    }
+
+    try {
+      await deleteMessages(documentId);
+      setMessages([]);
+      setStatus("Chat cleared");
+    } catch (clearError) {
+      setError(readErrorMessage(clearError, "Could not clear chat."));
+    }
+  }
+
   return (
     <div className="app-shell">
       <header className="app-header">
@@ -337,6 +364,7 @@ function App() {
           isBusy={isBusy}
           messages={messages}
           mode={mode}
+          onClearMessages={handleClearMessages}
           onInstructionChange={setInstruction}
           onSend={handleSend}
         />
