@@ -275,7 +275,7 @@ button:disabled {
 }
 
 .latex-editor {
-  background: #fbfcfa;
+  background: #f7fbfa;
   border: 0;
   color: #20242a;
   flex: 1 1 auto;
@@ -287,6 +287,12 @@ button:disabled {
   padding: 16px;
   resize: none;
   tab-size: 2;
+}
+
+.editor-panel .panel-header {
+  background:
+    linear-gradient(180deg, #fbfffd 0%, #f1f8f5 100%),
+    #f7fbfa;
 }
 
 .preview-document {
