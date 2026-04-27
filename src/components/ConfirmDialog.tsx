@@ -28,6 +28,7 @@ export function ConfirmDialog({
       >
         <div className="confirm-dialog-header">
           <h2 id="confirm-dialog-title">{title}</h2>
+          <div className="confirm-dialog-divider" />
           <p id="confirm-dialog-message">{message}</p>
         </div>
 
@@ -47,4 +48,3 @@ export function ConfirmDialog({
     </div>
   );
 }
-
