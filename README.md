@@ -2,6 +2,12 @@
 
 EdgeTex Agent is a lightweight AI-assisted LaTeX editor for the Cloudflare AI app assignment. It gives users a small Overleaf-style workspace with a LaTeX editor, a lightweight HTML preview, and a chat assistant that can generate, improve, fix, academicize, and review LaTeX documents through Cloudflare Worker API routes.
 
+## Try It
+
+- Deployed app: `https://edgetex-agent.edgetex.workers.dev`
+- Local app after setup: `http://localhost:5173`
+- AI prompts used during development and at runtime are documented in `PROMPTS.md`.
+
 ## Project Notes
 
 I built this as a focused MVP rather than a full Overleaf clone. The main goal was to show a practical Cloudflare AI workflow: a user edits LaTeX, asks the assistant for a change, the Worker coordinates the request, Workers AI returns a structured edit, and D1 keeps the document and chat history around between sessions.
