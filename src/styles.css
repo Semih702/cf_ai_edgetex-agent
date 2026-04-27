@@ -369,19 +369,19 @@ button:disabled {
 }
 
 .chat-panel {
-  background: #fbfaf6;
+  background: #f7fbfa;
   min-width: 0;
 }
 
 .chat-panel .panel-header {
   background:
-    linear-gradient(180deg, #fffefd 0%, #f7f5ec 100%),
-    #fbfaf6;
+    linear-gradient(180deg, #fbfffd 0%, #f1f8f5 100%),
+    #f7fbfa;
 }
 
 .chat-panel .message-list,
 .chat-panel .chat-input-row {
-  background: #fbfaf6;
+  background: #f7fbfa;
 }
 
 .mode-pill {
