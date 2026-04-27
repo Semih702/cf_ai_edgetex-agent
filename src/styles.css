@@ -560,7 +560,14 @@ button:disabled {
 .confirm-dialog h2 {
   font-size: 18px;
   line-height: 1.25;
-  margin: 0 0 8px;
+  margin: 0;
+}
+
+.confirm-dialog-divider {
+  background: #e2e7e4;
+  height: 1px;
+  margin: 12px 0 14px;
+  width: 100%;
 }
 
 .confirm-dialog p {
@@ -599,9 +606,14 @@ button:disabled {
 }
 
 .dialog-button.danger {
-  background: #9a3f2f;
-  border-color: #9a3f2f;
+  background: #c2412f;
+  border-color: #c2412f;
   color: #ffffff;
+}
+
+.dialog-button.danger:hover {
+  background: #9f2f22;
+  border-color: #9f2f22;
 }
 
 @media (max-width: 1220px) {
